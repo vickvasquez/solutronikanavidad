@@ -1,0 +1,230 @@
+
+
+body
+	font-size 16px
+	font-family Arial Helvetica
+	color black
+a
+	color gray
+	text-decoration none
+a
+	&:visited
+		color gray
+.container
+	max-width 1000px
+	margin 0 auto
+.header
+	background white
+	position: fixed
+	width 100%
+	margin 0 auto
+	z-index 10
+	.container
+		height 55px
+		padding 0 10px
+		position:relative
+	.menu
+		display none
+		position absolute
+		margin 0 auto
+		top: 0
+		left: 0;
+		bottom: 0;
+		right 0
+		height inherit
+		.lista
+			text-align right
+			padding 0
+			font-size 0
+		.tab 
+			border-bottom 1px solid trasparent
+			display inline-block
+			font-size 1rem
+			vertical-align top
+		a
+			display block
+			color gray
+			line-height 80px
+			text-transform: capitalize;
+			font-size 1.2rem
+			padding 0 0.5rem
+
+			&:hover
+				color blue
+				+ tab
+					border-bottom 1px solid blue
+	
+.logo
+	float none
+	height inherit
+	line-height 55px
+	position: relative
+	z-index: 7
+	img
+		vertical-align middle
+.search 
+	display none
+	position:absolute
+	right 0
+	top:25%;
+
+.icon-responsive
+	position:absolute
+	right 10px
+	cursor pointer
+	top 15px
+
+/*******************************
+* Comienza el slider     
+*******************************/
+.encabezado
+	animation animatedBackground 20s linear infinite
+	background url('../img/hetablet.jpg') no-repeat top center
+	background-size 50rem
+	height 30rem
+	position: relative
+	z-index 1
+	.container
+		top 5rem
+		position:relative
+		color white
+	.nombre-empresa
+		font-size 3rem
+		font-weight bold
+		text-align center
+		text-shadow 0 0 6px black
+		width 100%
+		.and
+		.nombre
+		.navidad
+			display block
+		.and
+			&:after
+				content "y"
+		.nombre
+			
+			&:after
+				content "Feliz Navidad"
+		.navidad
+			&:after
+				content "Prospero año nuevo 2015"
+.footer
+	background #0B72EC
+	.container
+		padding 5px
+	.contacto
+	.ubicacion
+		display inline-block
+		vertical-align top
+		font-size 0
+		width 98%
+	.contacto
+		font-size 1rem
+		.entrada-datos
+			display block
+			margin 0.5rem 
+		.input-text
+			outline 0
+			border-radius 5px 
+		.btn-text
+			border 0
+			color white
+			font-size 1.2rem
+			border-radius 5px
+			background #A81563
+			width 5rem
+			padding-left 12px !important
+			&:hover
+				opacity 0.8
+				width 100%
+	.ubicacion
+		.direccion
+		.mapa
+			display block
+			padding 0 0.5rem
+		.dir
+			text-align left
+			color white
+			font-size 1.1rem
+			margin 0
+			margin-bottom 5px
+		.mapa
+			width 98%
+			height 350px
+/*******************************
+* Comienza catalogos
+*******************************/
+.main
+	.container
+		padding 1rem 0
+	.lista-prod
+		margin 0
+		padding 0
+		font-size 0
+	.datos-generales
+		display block
+		.articulo
+			width 50%
+			margin 0 auto
+			display block
+	.prod-individual
+		display inline-block
+		vertical-align top
+		margin 0 auto
+		width 90%
+		.titulo
+			margin 0
+			padding 0
+			color black
+			display block 
+			text-align center
+			font-size 1.3rem
+		.descrip
+			margin 0 auto
+			.descripcion
+				text-align justify
+				width 90%
+				margin 0 auto
+				font-size 1rem
+
+					
+/***********************
+* Media Queries
+***********************/
+
+@media screen and (min-width:768px)
+	.header
+		background-size 5rem
+		height 80px
+		color gray !important
+		.logo
+			img
+				height 80px
+	.icon-responsive
+		display none
+	.menu
+		display block !important
+	.encabezado
+		background url('../img/encabezado.png'),url('../img/header.jpg')
+		background-size auto
+		box-sizing border-box
+		height 41rem
+		/*animation animatedBackground 40s linear infinite*/
+		padding-top 9rem
+		.and
+		.nombre
+		.navidad
+			font-size 4rem
+	.main
+		.articulo 
+			width 100% !important
+		.prod-individual
+			width 20%
+
+			&:nth-child(even)
+				margin 0 3rem
+	.footer
+		.contacto
+		.ubicacion
+			padding 0.5rem
+			width 48%
